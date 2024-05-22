@@ -22,12 +22,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="G8K-jA-3AC">
+                                <rect key="frame" x="0.0" y="92" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nMw-7a-cby"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1gS-4P-Laj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1o0-q8-AQJ"/>
                             <constraint firstItem="1gS-4P-Laj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HmN-2W-8GX"/>
+                            <constraint firstItem="G8K-jA-3AC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LzS-0q-dsG"/>
+                            <constraint firstItem="G8K-jA-3AC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g9B-z7-l1U"/>
+                            <constraint firstItem="G8K-jA-3AC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mE9-2N-owt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hCN-QH-Egy"/>

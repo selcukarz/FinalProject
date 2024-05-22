@@ -67,16 +67,72 @@
 			children = (
 				CF11D0C62BFE034400928D00 /* AppDelegate.swift */,
 				CF11D0C82BFE034400928D00 /* SceneDelegate.swift */,
-				CF11D0CA2BFE034400928D00 /* MainScreen.swift */,
-				CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */,
-				CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */,
-				CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */,
+				CFA3C5EC2BFE287800398ACB /* data */,
+				CFA3C5ED2BFE287F00398ACB /* ui */,
 				CF11D0CC2BFE034400928D00 /* Main.storyboard */,
 				CF11D0CF2BFE034500928D00 /* Assets.xcassets */,
 				CF11D0D12BFE034500928D00 /* LaunchScreen.storyboard */,
 				CF11D0D42BFE034500928D00 /* Info.plist */,
 			);
 			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		CFA3C5EC2BFE287800398ACB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3C5F22BFE2C9100398ACB /* repo */,
+				CFA3C5F12BFE2C8500398ACB /* model */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		CFA3C5ED2BFE287F00398ACB /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3C5F02BFE28BB00398ACB /* viewmodels */,
+				CFA3C5EF2BFE288E00398ACB /* tableview */,
+				CFA3C5EE2BFE288700398ACB /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CFA3C5EE2BFE288700398ACB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CF11D0CA2BFE034400928D00 /* MainScreen.swift */,
+				CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */,
+				CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */,
+				CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CFA3C5EF2BFE288E00398ACB /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		CFA3C5F02BFE28BB00398ACB /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		CFA3C5F12BFE2C8500398ACB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CFA3C5F22BFE2C9100398ACB /* repo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repo;
 			sourceTree = "<group>";
 		};
 		CFAA36362BFE172400F7A4E5 /* Frameworks */ = {
