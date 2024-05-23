@@ -8,7 +8,9 @@
 import UIKit
 
 class MainScreen: UIViewController {
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var mainScreenTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

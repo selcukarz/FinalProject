@@ -13,6 +13,8 @@
 		CF11D0CE2BFE034400928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CD2BFE034400928D00 /* Base */; };
 		CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CF2BFE034500928D00 /* Assets.xcassets */; };
 		CF11D0D32BFE034500928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0D22BFE034500928D00 /* Base */; };
+		CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */; };
+		CF8D9EE12BFFD7D6002FA5F0 /* MainScreenViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */; };
 		CFAA36382BFE172400F7A4E5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAA36372BFE172400F7A4E5 /* RxSwift */; };
 		CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */; };
 		CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */; };
@@ -28,6 +30,8 @@
 		CF11D0CF2BFE034500928D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF11D0D22BFE034500928D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11D0D42BFE034500928D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
+		CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewCell.swift; sourceTree = "<group>"; };
 		CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreen.swift; sourceTree = "<group>"; };
 		CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
@@ -73,8 +77,17 @@
 				CF11D0CF2BFE034500928D00 /* Assets.xcassets */,
 				CF11D0D12BFE034500928D00 /* LaunchScreen.storyboard */,
 				CF11D0D42BFE034500928D00 /* Info.plist */,
+				CF8D9EDB2BFFD368002FA5F0 /* fonts */,
 			);
 			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		CF8D9EDB2BFFD368002FA5F0 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		CFA3C5EC2BFE287800398ACB /* data */ = {
@@ -90,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA3C5F02BFE28BB00398ACB /* viewmodels */,
-				CFA3C5EF2BFE288E00398ACB /* tableview */,
+				CFA3C5EF2BFE288E00398ACB /* tableviews */,
 				CFA3C5EE2BFE288700398ACB /* views */,
 			);
 			path = ui;
@@ -107,11 +120,12 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		CFA3C5EF2BFE288E00398ACB /* tableview */ = {
+		CFA3C5EF2BFE288E00398ACB /* tableviews */ = {
 			isa = PBXGroup;
 			children = (
+				CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */,
 			);
-			path = tableview;
+			path = tableviews;
 			sourceTree = "<group>";
 		};
 		CFA3C5F02BFE28BB00398ACB /* viewmodels */ = {
@@ -207,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */,
+				CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */,
 				CF11D0D32BFE034500928D00 /* Base in Resources */,
 				CF11D0CE2BFE034400928D00 /* Base in Resources */,
 			);
@@ -221,6 +236,7 @@
 			files = (
 				CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */,
 				CFAA363E2BFE1B4100F7A4E5 /* FavoritesScreen.swift in Sources */,
+				CF8D9EE12BFFD7D6002FA5F0 /* MainScreenViewCell.swift in Sources */,
 				CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */,
 				CF11D0CB2BFE034400928D00 /* MainScreen.swift in Sources */,
 				CF11D0C72BFE034400928D00 /* AppDelegate.swift in Sources */,
