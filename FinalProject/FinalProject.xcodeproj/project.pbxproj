@@ -13,8 +13,11 @@
 		CF11D0CE2BFE034400928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CD2BFE034400928D00 /* Base */; };
 		CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CF2BFE034500928D00 /* Assets.xcassets */; };
 		CF11D0D32BFE034500928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0D22BFE034500928D00 /* Base */; };
+		CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */; };
 		CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */; };
-		CF8D9EE12BFFD7D6002FA5F0 /* MainScreenViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */; };
+		CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B62C00AD9F00CC21C4 /* Foods.swift */; };
+		CFA227B92C03B6C900CC21C4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* Repository.swift */; };
+		CFA227C02C03C8A200CC21C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFA227BF2C03C8A200CC21C4 /* Alamofire */; };
 		CFAA36382BFE172400F7A4E5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAA36372BFE172400F7A4E5 /* RxSwift */; };
 		CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */; };
 		CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */; };
@@ -30,8 +33,10 @@
 		CF11D0CF2BFE034500928D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF11D0D22BFE034500928D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11D0D42BFE034500928D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
-		CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewCell.swift; sourceTree = "<group>"; };
+		CFA227B62C00AD9F00CC21C4 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		CFA227B82C03B6C900CC21C4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreen.swift; sourceTree = "<group>"; };
 		CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAA36382BFE172400F7A4E5 /* RxSwift in Frameworks */,
+				CFA227C02C03C8A200CC21C4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA3C5F22BFE2C9100398ACB /* repo */,
-				CFA3C5F12BFE2C8500398ACB /* model */,
+				CFA3C5F12BFE2C8500398ACB /* models */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -123,7 +129,7 @@
 		CFA3C5EF2BFE288E00398ACB /* tableviews */ = {
 			isa = PBXGroup;
 			children = (
-				CF8D9EE02BFFD7D6002FA5F0 /* MainScreenViewCell.swift */,
+				CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */,
 			);
 			path = tableviews;
 			sourceTree = "<group>";
@@ -135,16 +141,18 @@
 			path = viewmodels;
 			sourceTree = "<group>";
 		};
-		CFA3C5F12BFE2C8500398ACB /* model */ = {
+		CFA3C5F12BFE2C8500398ACB /* models */ = {
 			isa = PBXGroup;
 			children = (
+				CFA227B62C00AD9F00CC21C4 /* Foods.swift */,
 			);
-			path = model;
+			path = models;
 			sourceTree = "<group>";
 		};
 		CFA3C5F22BFE2C9100398ACB /* repo */ = {
 			isa = PBXGroup;
 			children = (
+				CFA227B82C03B6C900CC21C4 /* Repository.swift */,
 			);
 			path = repo;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			name = FinalProject;
 			packageProductDependencies = (
 				CFAA36372BFE172400F7A4E5 /* RxSwift */,
+				CFA227BF2C03C8A200CC21C4 /* Alamofire */,
 			);
 			productName = FinalProject;
 			productReference = CF11D0C32BFE034400928D00 /* FinalProject.app */;
@@ -205,6 +214,7 @@
 			mainGroup = CF11D0BA2BFE034400928D00;
 			packageReferences = (
 				CFAA36352BFE171900F7A4E5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CFA227BA2C03C88200CC21C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CF11D0C42BFE034400928D00 /* Products */;
 			projectDirPath = "";
@@ -235,12 +245,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */,
+				CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */,
 				CFAA363E2BFE1B4100F7A4E5 /* FavoritesScreen.swift in Sources */,
-				CF8D9EE12BFFD7D6002FA5F0 /* MainScreenViewCell.swift in Sources */,
 				CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */,
 				CF11D0CB2BFE034400928D00 /* MainScreen.swift in Sources */,
 				CF11D0C72BFE034400928D00 /* AppDelegate.swift in Sources */,
+				CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */,
 				CF11D0C92BFE034400928D00 /* SceneDelegate.swift in Sources */,
+				CFA227B92C03B6C900CC21C4 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +477,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CFA227BA2C03C88200CC21C4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		CFAA36352BFE171900F7A4E5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -476,6 +496,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CFA227BF2C03C8A200CC21C4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFA227BA2C03C88200CC21C4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		CFAA36372BFE172400F7A4E5 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CFAA36352BFE171900F7A4E5 /* XCRemoteSwiftPackageReference "RxSwift" */;
