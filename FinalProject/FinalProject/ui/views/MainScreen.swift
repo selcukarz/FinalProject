@@ -29,7 +29,6 @@ class MainScreen: UIViewController {
         design.minimumInteritemSpacing = 10
         design.minimumLineSpacing = 10
         
-        //10 X 10 X 10    = 30 birim mesafe  X --> Item symbol
         let screenWidth = UIScreen.main.bounds.width
         let itemWidth = (screenWidth - 30) / 2
         

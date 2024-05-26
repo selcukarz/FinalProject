@@ -18,6 +18,7 @@
 		CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B62C00AD9F00CC21C4 /* Foods.swift */; };
 		CFA227B92C03B6C900CC21C4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* Repository.swift */; };
 		CFA227C02C03C8A200CC21C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFA227BF2C03C8A200CC21C4 /* Alamofire */; };
+		CFA227C22C03E1D800CC21C4 /* BucketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */; };
 		CFAA36382BFE172400F7A4E5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAA36372BFE172400F7A4E5 /* RxSwift */; };
 		CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */; };
 		CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */; };
@@ -37,6 +38,7 @@
 		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
 		CFA227B62C00AD9F00CC21C4 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		CFA227B82C03B6C900CC21C4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketTableViewCell.swift; sourceTree = "<group>"; };
 		CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreen.swift; sourceTree = "<group>"; };
 		CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
@@ -88,12 +90,28 @@
 			path = FinalProject;
 			sourceTree = "<group>";
 		};
+		CF7765242C03E3A100AE3C4A /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
 		CF8D9EDB2BFFD368002FA5F0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
 				CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		CFA227C32C03E33100CC21C4 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */,
+			);
+			path = collectionview;
 			sourceTree = "<group>";
 		};
 		CFA3C5EC2BFE287800398ACB /* data */ = {
@@ -109,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA3C5F02BFE28BB00398ACB /* viewmodels */,
-				CFA3C5EF2BFE288E00398ACB /* tableviews */,
+				CF7765242C03E3A100AE3C4A /* tableview */,
+				CFA227C32C03E33100CC21C4 /* collectionview */,
 				CFA3C5EE2BFE288700398ACB /* views */,
 			);
 			path = ui;
@@ -124,14 +143,6 @@
 				CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		CFA3C5EF2BFE288E00398ACB /* tableviews */ = {
-			isa = PBXGroup;
-			children = (
-				CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */,
-			);
-			path = tableviews;
 			sourceTree = "<group>";
 		};
 		CFA3C5F02BFE28BB00398ACB /* viewmodels */ = {
@@ -247,6 +258,7 @@
 				CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */,
 				CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */,
 				CFAA363E2BFE1B4100F7A4E5 /* FavoritesScreen.swift in Sources */,
+				CFA227C22C03E1D800CC21C4 /* BucketTableViewCell.swift in Sources */,
 				CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */,
 				CF11D0CB2BFE034400928D00 /* MainScreen.swift in Sources */,
 				CF11D0C72BFE034400928D00 /* AppDelegate.swift in Sources */,
