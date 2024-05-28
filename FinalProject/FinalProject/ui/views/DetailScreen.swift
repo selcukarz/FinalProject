@@ -14,39 +14,39 @@ class DetailScreen: UIViewController {
     @IBOutlet weak var labelNumberOfItem: UILabel!
     @IBOutlet weak var labelTotalPrice: UILabel!
     
-    var food:Foods?
-    var numberOfItem = 0
+    var foods:Foods!
+    var yemek_siparis_adet = 0
+    var viewModel = DetailScreenViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let f = food {
+        if let f = foods {
             foodImageView.image = UIImage(named: "\(f.yemek_resim_adi!)")
             labelFoodName.text = f.yemek_adi!
             labelFoodPrice.text = "₺"+String(f.yemek_fiyat!)
             labelTotalPrice.text = "₺0"
-            labelNumberOfItem.text = String(numberOfItem)
+            labelNumberOfItem.text = String(yemek_siparis_adet)
         }
-
     }
     @IBAction func buttonDecrease(_ sender: Any) {
-        if let f = food{
-            if numberOfItem == 0{
+        if let f = foods {
+            if yemek_siparis_adet == 0{
             }else {
-                numberOfItem -= 1
+                yemek_siparis_adet -= 1
             }
-            labelNumberOfItem.text = String(numberOfItem)
-            labelTotalPrice.text = "₺"+String(f.yemek_fiyat!*numberOfItem)
+            labelNumberOfItem.text = String(yemek_siparis_adet)
+            labelTotalPrice.text = "₺"+String(Int(f.yemek_fiyat!)! * yemek_siparis_adet)
         }
     }
     @IBAction func buttonIncrease(_ sender: Any) {
-        if let f = food {
-            numberOfItem += 1
-            labelNumberOfItem.text = String(numberOfItem)
-            labelTotalPrice.text = "₺"+String(f.yemek_fiyat!*numberOfItem)
+        if let f = foods {
+            yemek_siparis_adet += 1
+            labelNumberOfItem.text = String(yemek_siparis_adet)
+            labelTotalPrice.text = "₺"+String(Int(f.yemek_fiyat!)! * yemek_siparis_adet)
         }
     }
     @IBAction func buttonAddButton(_ sender: Any) {
-        print("Ürün sepete eklendi.")
+        viewModel.add(sepet_yemek_id: Int(foods.yemek_id!)!, yemek_adi: foods.yemek_adi!, yemek_resim_adi: foods.yemek_resim_adi!, yemek_fiyat: Int(foods.yemek_fiyat!)!, yemek_siparis_adet: yemek_siparis_adet, kullanici_adi: "selcuk_arioz")
     }
 }

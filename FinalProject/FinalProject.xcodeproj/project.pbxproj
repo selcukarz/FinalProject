@@ -20,8 +20,10 @@
 		CF8709882C05CCA5008D397A /* FavoritesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709872C05CCA5008D397A /* FavoritesScreenViewModel.swift */; };
 		CF87098A2C05D3D2008D397A /* CRUDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709892C05D3D2008D397A /* CRUDResponse.swift */; };
 		CF87098C2C05D554008D397A /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098B2C05D554008D397A /* FoodsResponse.swift */; };
-		CF87098E2C05D5FE008D397A /* FoodBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */; };
+		CF87098E2C05D5FE008D397A /* BasketFoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098D2C05D5FE008D397A /* BasketFoodsResponse.swift */; };
 		CF8709902C05D64E008D397A /* BasketFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098F2C05D64E008D397A /* BasketFoods.swift */; };
+		CF8709932C060F5A008D397A /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */; };
+		CF8709952C061A02008D397A /* FavoriteFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709942C061A02008D397A /* FavoriteFoods.swift */; };
 		CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */; };
 		CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B62C00AD9F00CC21C4 /* Foods.swift */; };
 		CFA227B92C03B6C900CC21C4 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */; };
@@ -49,8 +51,10 @@
 		CF8709872C05CCA5008D397A /* FavoritesScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenViewModel.swift; sourceTree = "<group>"; };
 		CF8709892C05D3D2008D397A /* CRUDResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDResponse.swift; sourceTree = "<group>"; };
 		CF87098B2C05D554008D397A /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
-		CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketResponse.swift; sourceTree = "<group>"; };
+		CF87098D2C05D5FE008D397A /* BasketFoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFoodsResponse.swift; sourceTree = "<group>"; };
 		CF87098F2C05D64E008D397A /* BasketFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFoods.swift; sourceTree = "<group>"; };
+		CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		CF8709942C061A02008D397A /* FavoriteFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoods.swift; sourceTree = "<group>"; };
 		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
 		CFA227B62C00AD9F00CC21C4 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
@@ -110,8 +114,18 @@
 			isa = PBXGroup;
 			children = (
 				CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */,
+				CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */,
 			);
 			path = tableview;
+			sourceTree = "<group>";
+		};
+		CF8709912C05FA56008D397A /* cellviews */ = {
+			isa = PBXGroup;
+			children = (
+				CFA227C32C03E33100CC21C4 /* collectionview */,
+				CF7765242C03E3A100AE3C4A /* tableview */,
+			);
+			path = cellviews;
 			sourceTree = "<group>";
 		};
 		CF8D9EDB2BFFD368002FA5F0 /* fonts */ = {
@@ -143,8 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA3C5F02BFE28BB00398ACB /* viewmodels */,
-				CF7765242C03E3A100AE3C4A /* tableview */,
-				CFA227C32C03E33100CC21C4 /* collectionview */,
+				CF8709912C05FA56008D397A /* cellviews */,
 				CFA3C5EE2BFE288700398ACB /* views */,
 			);
 			path = ui;
@@ -176,10 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				CFA227B62C00AD9F00CC21C4 /* Foods.swift */,
-				CF87098F2C05D64E008D397A /* BasketFoods.swift */,
 				CF87098B2C05D554008D397A /* FoodsResponse.swift */,
-				CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */,
+				CF87098F2C05D64E008D397A /* BasketFoods.swift */,
+				CF87098D2C05D5FE008D397A /* BasketFoodsResponse.swift */,
 				CF8709892C05D3D2008D397A /* CRUDResponse.swift */,
+				CF8709942C061A02008D397A /* FavoriteFoods.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -287,7 +301,7 @@
 				CF8709882C05CCA5008D397A /* FavoritesScreenViewModel.swift in Sources */,
 				CFAA363E2BFE1B4100F7A4E5 /* FavoritesScreen.swift in Sources */,
 				CFA227C22C03E1D800CC21C4 /* BasketTableViewCell.swift in Sources */,
-				CF87098E2C05D5FE008D397A /* FoodBasketResponse.swift in Sources */,
+				CF87098E2C05D5FE008D397A /* BasketFoodsResponse.swift in Sources */,
 				CF8709842C05CC7F008D397A /* DetailScreenViewModel.swift in Sources */,
 				CF87098C2C05D554008D397A /* FoodsResponse.swift in Sources */,
 				CF87098A2C05D3D2008D397A /* CRUDResponse.swift in Sources */,
@@ -297,6 +311,8 @@
 				CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */,
 				CF11D0C92BFE034400928D00 /* SceneDelegate.swift in Sources */,
 				CFA227B92C03B6C900CC21C4 /* FoodRepository.swift in Sources */,
+				CF8709952C061A02008D397A /* FavoriteFoods.swift in Sources */,
+				CF8709932C060F5A008D397A /* FavoritesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

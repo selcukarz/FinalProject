@@ -17,6 +17,7 @@ class MainViewCell: UICollectionViewCell {
     @IBOutlet weak var labelAd: UILabel!
     @IBOutlet weak var labelUcretsizGonderim: UILabel!
     @IBOutlet weak var labelFiyat: UILabel!
+    @IBOutlet weak var buttonFav: UIButton!
     
     var cellProtocol:CellProtocol?
     var indexPath:IndexPath?
@@ -27,5 +28,6 @@ class MainViewCell: UICollectionViewCell {
     
     @IBAction func buttonAddFav(_ sender: Any) {
         cellProtocol?.clickedFav(indexPath: indexPath!)
+        
     }
 }

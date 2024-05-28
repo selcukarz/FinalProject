@@ -1,5 +1,5 @@
 //
-//  FavoritesScreenViewModel.swift
+//  FavoriFoods.swift
 //  FinalProject
 //
 //  Created by Selçuk Arıöz on 28.05.2024.
@@ -7,9 +7,7 @@
 
 import Foundation
 
-
-class FavoritesScreenViewModel {
-    var frepo = FoodRepository()
+class FavoriteFoods : Codable {
     
     
     

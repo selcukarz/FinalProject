@@ -8,15 +8,15 @@
 import Foundation
 
 class BasketFoods : Codable {
-    var yemek_id:String?
+    var sepet_yemek_id:String?
     var yemek_adi:String?
     var yemek_resim_adi:String?
     var yemek_fiyat:String?
     var yemek_siparis_adet:String?
-    var kullanici_adi = "selcuk_arioz"
+    var kullanici_adi:String?
     
-    init(yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String = "selcuk_arioz") {
-        self.yemek_id = yemek_id
+    init(sepet_yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String) {
+        self.sepet_yemek_id = sepet_yemek_id
         self.yemek_adi = yemek_adi
         self.yemek_resim_adi = yemek_resim_adi
         self.yemek_fiyat = yemek_fiyat

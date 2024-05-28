@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FoodBasketResponse : Codable {
+class BasketFoodsResponse : Codable {
     var sepetYemekler:[BasketFoods]?
     var success:Int?
 }

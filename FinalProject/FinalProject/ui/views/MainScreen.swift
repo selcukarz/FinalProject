@@ -16,15 +16,17 @@ class MainScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let f1 = Foods(yemek_id: "1", yemek_adi: "Ayran", yemek_resim_adi: "ayran", yemek_fiyat: "40")
-        let f2 = Foods(yemek_id: "2", yemek_adi: "Baklava", yemek_resim_adi: "baklava", yemek_fiyat: "10")
-        listFoods.append(f1)
-        listFoods.append(f2)
+        searchBar.delegate = self
         
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         
+        _ = viewModel.listFoods.subscribe(onNext: { list in
+            self.listFoods = list
+            DispatchQueue.main.async {
+                self.mainCollectionView.reloadData()
+            }
+        })
         let design = UICollectionViewFlowLayout()
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         design.minimumInteritemSpacing = 10
@@ -37,10 +39,19 @@ class MainScreen: UIViewController {
         
         mainCollectionView.collectionViewLayout = design
     }
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.copyDatabase()
+        //Bu sayfaya dönüldüğünde verileri yüklenmiş olacak.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail"{
+            if let food = sender as? Foods {
+                let vc = segue.destination as! DetailScreen
+                vc.foods = food
+            }
+        }
+    }
 }
-
 extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellProtocol {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,25 +77,26 @@ extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellPr
     }
     func clickedAdd(indexPath: IndexPath){
         let food = listFoods[indexPath.row]
-        print("anasayfa: \(food.yemek_adi!) ekle tiklandi")
+        viewModel.add(yemek_adi: food.yemek_adi!, yemek_resim_adi: food.yemek_resim_adi!, yemek_fiyat: Int(food.yemek_fiyat!)!, yemek_siparis_adet: 1, kullanici_adi: "selcuk_arioz")
     }
     func clickedFav(indexPath: IndexPath){
         let food = listFoods[indexPath.row]
+       // if food.favori == false {
+            //food.favori = true
+            //buttonfav.setImage(UIImage(named: "favoritefill"), for: .normal)
+        //}else {
+           // food.favori = false
+            //buttonfav.setImage(UIImage(named: "favortiesoutlined"), for: .normal)
+        //}
         print("anasayfa \(food.yemek_adi!) favoriye eklendi.")
+        
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = listFoods[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: food)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetail"{
-            if let food = sender as? Foods {
-                let vc = segue.destination as! DetailScreen
-                vc.food = food
-            }
-        }
-    }
+    
 }
 extension MainScreen : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
