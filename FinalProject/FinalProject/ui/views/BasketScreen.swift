@@ -19,9 +19,7 @@ class BasketScreen: UIViewController {
 
     
     }
-    
     @IBAction func buttonBucketConfirm(_ sender: Any) {
+        print("Sepeti alım onaylandı.")
     }
-    
-
 }

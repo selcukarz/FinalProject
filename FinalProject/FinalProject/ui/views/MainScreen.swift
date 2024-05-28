@@ -12,12 +12,13 @@ class MainScreen: UIViewController {
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     var listFoods = [Foods]()
+    var viewModel = MainScreenViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let f1 = Foods(yemek_id: 1, yemek_adi: "Ayran", yemek_resim_adi: "ayran", yemek_fiyat: 40)
-        let f2 = Foods(yemek_id: 2, yemek_adi: "Baklava", yemek_resim_adi: "baklava", yemek_fiyat: 10)
+        let f1 = Foods(yemek_id: "1", yemek_adi: "Ayran", yemek_resim_adi: "ayran", yemek_fiyat: "40")
+        let f2 = Foods(yemek_id: "2", yemek_adi: "Baklava", yemek_resim_adi: "baklava", yemek_fiyat: "10")
         listFoods.append(f1)
         listFoods.append(f2)
         
@@ -84,6 +85,9 @@ extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellPr
             }
         }
     }
-    
-    
+}
+extension MainScreen : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.search(searchText: searchText)
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BucketTableViewCell: UITableViewCell {
+class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewYemek: UIImageView!
     @IBOutlet weak var labelYemekAdi: UILabel!
     @IBOutlet weak var labelTekliFiyat: UILabel!
@@ -24,6 +24,6 @@ class BucketTableViewCell: UITableViewCell {
 
     }
 
-    @IBAction func buttonBucketConfirm(_ sender: Any) {
+    @IBAction func buttonItemDelete(_ sender: Any) {
     }
 }

@@ -14,11 +14,19 @@
 		CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CF2BFE034500928D00 /* Assets.xcassets */; };
 		CF11D0D32BFE034500928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0D22BFE034500928D00 /* Base */; };
 		CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */; };
+		CF8709822C05CC72008D397A /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709812C05CC72008D397A /* MainScreenViewModel.swift */; };
+		CF8709842C05CC7F008D397A /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709832C05CC7F008D397A /* DetailScreenViewModel.swift */; };
+		CF8709862C05CC92008D397A /* BasketScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709852C05CC92008D397A /* BasketScreenViewModel.swift */; };
+		CF8709882C05CCA5008D397A /* FavoritesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709872C05CCA5008D397A /* FavoritesScreenViewModel.swift */; };
+		CF87098A2C05D3D2008D397A /* CRUDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709892C05D3D2008D397A /* CRUDResponse.swift */; };
+		CF87098C2C05D554008D397A /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098B2C05D554008D397A /* FoodsResponse.swift */; };
+		CF87098E2C05D5FE008D397A /* FoodBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */; };
+		CF8709902C05D64E008D397A /* BasketFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098F2C05D64E008D397A /* BasketFoods.swift */; };
 		CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */; };
 		CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B62C00AD9F00CC21C4 /* Foods.swift */; };
-		CFA227B92C03B6C900CC21C4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* Repository.swift */; };
+		CFA227B92C03B6C900CC21C4 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */; };
 		CFA227C02C03C8A200CC21C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFA227BF2C03C8A200CC21C4 /* Alamofire */; };
-		CFA227C22C03E1D800CC21C4 /* BucketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */; };
+		CFA227C22C03E1D800CC21C4 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */; };
 		CFAA36382BFE172400F7A4E5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAA36372BFE172400F7A4E5 /* RxSwift */; };
 		CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */; };
 		CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */; };
@@ -35,10 +43,18 @@
 		CF11D0D22BFE034500928D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11D0D42BFE034500928D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		CF8709812C05CC72008D397A /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		CF8709832C05CC7F008D397A /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
+		CF8709852C05CC92008D397A /* BasketScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenViewModel.swift; sourceTree = "<group>"; };
+		CF8709872C05CCA5008D397A /* FavoritesScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenViewModel.swift; sourceTree = "<group>"; };
+		CF8709892C05D3D2008D397A /* CRUDResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDResponse.swift; sourceTree = "<group>"; };
+		CF87098B2C05D554008D397A /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
+		CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketResponse.swift; sourceTree = "<group>"; };
+		CF87098F2C05D64E008D397A /* BasketFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFoods.swift; sourceTree = "<group>"; };
 		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
 		CFA227B62C00AD9F00CC21C4 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
-		CFA227B82C03B6C900CC21C4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketTableViewCell.swift; sourceTree = "<group>"; };
+		CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
+		CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		CFAA36392BFE18C400F7A4E5 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		CFAA363B2BFE18F800F7A4E5 /* BasketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreen.swift; sourceTree = "<group>"; };
 		CFAA363D2BFE1B4100F7A4E5 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
@@ -93,7 +109,7 @@
 		CF7765242C03E3A100AE3C4A /* tableview */ = {
 			isa = PBXGroup;
 			children = (
-				CFA227C12C03E1D800CC21C4 /* BucketTableViewCell.swift */,
+				CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */,
 			);
 			path = tableview;
 			sourceTree = "<group>";
@@ -148,6 +164,10 @@
 		CFA3C5F02BFE28BB00398ACB /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				CF8709812C05CC72008D397A /* MainScreenViewModel.swift */,
+				CF8709832C05CC7F008D397A /* DetailScreenViewModel.swift */,
+				CF8709852C05CC92008D397A /* BasketScreenViewModel.swift */,
+				CF8709872C05CCA5008D397A /* FavoritesScreenViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -156,6 +176,10 @@
 			isa = PBXGroup;
 			children = (
 				CFA227B62C00AD9F00CC21C4 /* Foods.swift */,
+				CF87098F2C05D64E008D397A /* BasketFoods.swift */,
+				CF87098B2C05D554008D397A /* FoodsResponse.swift */,
+				CF87098D2C05D5FE008D397A /* FoodBasketResponse.swift */,
+				CF8709892C05D3D2008D397A /* CRUDResponse.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -163,7 +187,7 @@
 		CFA3C5F22BFE2C9100398ACB /* repo */ = {
 			isa = PBXGroup;
 			children = (
-				CFA227B82C03B6C900CC21C4 /* Repository.swift */,
+				CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */,
 			);
 			path = repo;
 			sourceTree = "<group>";
@@ -256,15 +280,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAA363C2BFE18F800F7A4E5 /* BasketScreen.swift in Sources */,
+				CF8709822C05CC72008D397A /* MainScreenViewModel.swift in Sources */,
 				CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */,
+				CF8709902C05D64E008D397A /* BasketFoods.swift in Sources */,
+				CF8709862C05CC92008D397A /* BasketScreenViewModel.swift in Sources */,
+				CF8709882C05CCA5008D397A /* FavoritesScreenViewModel.swift in Sources */,
 				CFAA363E2BFE1B4100F7A4E5 /* FavoritesScreen.swift in Sources */,
-				CFA227C22C03E1D800CC21C4 /* BucketTableViewCell.swift in Sources */,
+				CFA227C22C03E1D800CC21C4 /* BasketTableViewCell.swift in Sources */,
+				CF87098E2C05D5FE008D397A /* FoodBasketResponse.swift in Sources */,
+				CF8709842C05CC7F008D397A /* DetailScreenViewModel.swift in Sources */,
+				CF87098C2C05D554008D397A /* FoodsResponse.swift in Sources */,
+				CF87098A2C05D3D2008D397A /* CRUDResponse.swift in Sources */,
 				CFAA363A2BFE18C400F7A4E5 /* DetailScreen.swift in Sources */,
 				CF11D0CB2BFE034400928D00 /* MainScreen.swift in Sources */,
 				CF11D0C72BFE034400928D00 /* AppDelegate.swift in Sources */,
 				CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */,
 				CF11D0C92BFE034400928D00 /* SceneDelegate.swift in Sources */,
-				CFA227B92C03B6C900CC21C4 /* Repository.swift in Sources */,
+				CFA227B92C03B6C900CC21C4 /* FoodRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
