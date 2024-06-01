@@ -8,6 +8,6 @@
 import Foundation
 
 class BasketFoodsResponse : Codable {
-    var sepetYemekler:[BasketFoods]?
+    var sepet_yemekler:[BasketFoods]?
     var success:Int?
 }

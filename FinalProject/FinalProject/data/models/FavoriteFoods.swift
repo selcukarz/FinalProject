@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FavoriteFoods : Codable {
+class FavoriteFoods {
     
     
     

@@ -17,56 +17,37 @@ class BasketScreen: UIViewController {
     var basketFoods = [BasketFoods]()
     var viewModel = BasketScreenViewModel()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var f1 = BasketFoods(sepet_yemek_id: "1", yemek_adi:"Köfte" , yemek_resim_adi: "kofte", yemek_fiyat: "25", yemek_siparis_adet: "2", kullanici_adi: "selcuk_arioz")
-        basketFoods.append(f1)
-        var f2 = BasketFoods(sepet_yemek_id: "2", yemek_adi:"Kahve" , yemek_resim_adi: "kahve", yemek_fiyat: "16", yemek_siparis_adet: "5", kullanici_adi: "selcuk_arioz")
-        basketFoods.append(f2)
-        var f3 = BasketFoods(sepet_yemek_id: "3", yemek_adi:"Lazanya" , yemek_resim_adi: "lazanya", yemek_fiyat: "32", yemek_siparis_adet: "1", kullanici_adi: "selcuk_arioz")
-        basketFoods.append(f3)
         
         basketTableView.delegate = self
         basketTableView.dataSource = self
         
-        self.basketTableView.reloadData()
-        
         _ = viewModel.listBasketFoods.subscribe(onNext: { liste in
             self.basketFoods = liste
-            
+            DispatchQueue.main.async {
+                self.basketTableView.reloadData()
+            }
         })
     }
     @IBAction func buttonBucketConfirm(_ sender: Any) {
         print("Sepeti alım onaylandı.")
-        viewModel.getAllFood(kullanici_adi:"selcuk_arioz")
     }
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toBasketDetail" {
-            if let kisi = sender as? Kisiler {
-                let gidilecekVC = segue.destination as! KisiDetay
-                gidilecekVC.kisi = kisi
-            }
-        }
-    }*/
     override func viewWillAppear(_ animated: Bool) {
         viewModel.getAllFood(kullanici_adi:"selcuk_arioz")
     }
 }
 extension BasketScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(basketFoods.count)
         return basketFoods.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basketDetail") as! BasketTableViewCell
         let basketFood = basketFoods[indexPath.row]
         
-        var yemekFiyatInt = Int(basketFood.yemek_fiyat!)!
-        var yemekAdetInt = Int(basketFood.yemek_siparis_adet!)!
-        var totalPrice = yemekAdetInt * yemekFiyatInt
+        let yemekFiyatInt = Int(basketFood.yemek_fiyat!)!
+        let yemekAdetInt = Int(basketFood.yemek_siparis_adet!)!
+        let totalPrice = yemekAdetInt * yemekFiyatInt
         
         cell.imageViewYemek.image = UIImage(named: basketFood.yemek_resim_adi!)
         cell.labelYemekAdi.text = basketFood.yemek_adi!
@@ -76,21 +57,20 @@ extension BasketScreen: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAciton = UIContextualAction(style: .destructive, title: "Sil"){
             centexualAciton,view,bool in
-            let food = self.basketFoods[indexPath.row]
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(food.yemek_adi!) silinsin mi?", preferredStyle: .alert)
+            let basketFood = self.basketFoods[indexPath.row]
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(basketFood.yemek_adi!) silinsin mi?", preferredStyle: .alert)
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
-                self.viewModel.delete(yemek_id: food.sepet_yemek_id!)
+                self.viewModel.delete(sepet_yemek_id: Int(basketFood.sepet_yemek_id!)!, kullanici_adi: basketFood.kullanici_adi!)
+                self.viewModel.getAllFood(kullanici_adi:"selcuk_arioz")
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
         }
         return UISwipeActionsConfiguration(actions: [deleteAciton])
     }
-    
 }

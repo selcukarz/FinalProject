@@ -110,20 +110,20 @@
 			path = FinalProject;
 			sourceTree = "<group>";
 		};
-		CF7765242C03E3A100AE3C4A /* tableview */ = {
+		CF7765242C03E3A100AE3C4A /* tableviews */ = {
 			isa = PBXGroup;
 			children = (
 				CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */,
 				CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */,
 			);
-			path = tableview;
+			path = tableviews;
 			sourceTree = "<group>";
 		};
 		CF8709912C05FA56008D397A /* cellviews */ = {
 			isa = PBXGroup;
 			children = (
 				CFA227C32C03E33100CC21C4 /* collectionview */,
-				CF7765242C03E3A100AE3C4A /* tableview */,
+				CF7765242C03E3A100AE3C4A /* tableviews */,
 			);
 			path = cellviews;
 			sourceTree = "<group>";
