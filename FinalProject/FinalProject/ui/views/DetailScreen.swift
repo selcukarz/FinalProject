@@ -18,8 +18,13 @@ class DetailScreen: UIViewController {
     var yemek_siparis_adet = 0
     var viewModel = DetailScreenViewModel()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navAppearance = UINavigationBarAppearance()
+        navAppearance.backgroundColor = UIColor(named: "navigationcolor")
+        navAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "basecolor")!,.font: UIFont(name: "Oswald-ExtraLight", size: 22)!]
         
         if let f = foods {
             foodImageView.image = UIImage(named: "\(f.yemek_resim_adi!)")

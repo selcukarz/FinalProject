@@ -25,20 +25,3 @@ struct BasketFoods : Codable {
     }
     
 }
-
-class BasketFoodsArray {
-    var foods: [BasketFoods]
-    
-    init(foods: [BasketFoods]) {
-        self.foods = foods
-    }
-    func getInfoIntoArray() -> [String]{
-        var infos: [String] = []
-        for food in foods {
-            infos.append(food.yemek_siparis_adet!)
-            infos.append(food.yemek_fiyat!)
-
-        }
-        return infos
-    }
-}

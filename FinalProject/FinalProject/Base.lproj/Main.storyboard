@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -49,15 +50,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-v0-HRx">
-                                                    <rect key="frame" x="75" y="152" width="50" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <rect key="frame" x="74.5" y="152" width="51.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ücretsiz Gönderim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-6O-SoA">
                                                     <rect key="frame" x="40" y="192" width="120.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.55131164430000001" green="0.5504602341" blue="0.56533224989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx7-JZ-iGV">
@@ -68,6 +69,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADu-Qc-tUC">
                                                     <rect key="frame" x="82.5" y="265" width="35" height="35"/>
+                                                    <color key="tintColor" name="tabbaricon"/>
                                                     <buttonConfiguration key="configuration" style="filled">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="+">
@@ -93,7 +95,7 @@
                                                         <constraint firstAttribute="width" constant="24" id="TKc-Ls-WXp"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="favouritefill" imagePadding="0.0"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="favortiesoutlined" imagePadding="0.0"/>
                                                     <connections>
                                                         <action selector="buttonAddFav:" destination="pem-2y-g3z" eventType="touchUpInside" id="iCA-La-YX2"/>
                                                     </connections>
@@ -166,8 +168,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yemek adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-SU-1Kp">
-                                <rect key="frame" x="131" y="463" width="152.5" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="124.5" y="463" width="165" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -177,6 +179,7 @@
                                     <constraint firstAttribute="height" constant="46" id="Zxl-gU-5zt"/>
                                     <constraint firstAttribute="width" constant="46" id="i8X-in-YPr"/>
                                 </constraints>
+                                <color key="tintColor" name="tabbaricon"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -198,6 +201,7 @@
                                     <constraint firstAttribute="height" constant="46" id="Cnv-4F-1yK"/>
                                     <constraint firstAttribute="width" constant="46" id="sXS-6v-y6S"/>
                                 </constraints>
+                                <color key="tintColor" name="tabbaricon"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -220,8 +224,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-o8-jLW">
-                                <rect key="frame" x="34" y="760.5" width="60" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <rect key="frame" x="34" y="741.5" width="96.5" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -230,6 +234,7 @@
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-i3-Dni">
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="27"/>
+                                        <color key="tintColor" name="basecolor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
@@ -245,6 +250,7 @@
                                     </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9q-rO-FMo">
                                         <rect key="frame" x="132" y="0.0" width="118" height="27"/>
+                                        <color key="tintColor" name="basecolor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
@@ -260,6 +266,7 @@
                                     </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMx-04-I68">
                                         <rect key="frame" x="264" y="0.0" width="118" height="27"/>
+                                        <color key="tintColor" name="basecolor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" subtitle="">
                                             <attributedString key="attributedTitle">
@@ -275,7 +282,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY8-pu-Tu7">
-                                <rect key="frame" x="244" y="755" width="153.5" height="42.5"/>
+                                <rect key="frame" x="244" y="736" width="153.5" height="61.5"/>
+                                <color key="tintColor" name="confirmcolor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -333,7 +341,7 @@
             </objects>
             <point key="canvasLocation" x="3031.884057971015" y="-388.39285714285711"/>
         </scene>
-        <!--Favorites Screen-->
+        <!--Favoriler-->
         <scene sceneID="sxe-WV-BMN">
             <objects>
                 <viewController id="9Ny-KD-kd1" customClass="FavoritesScreen" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -400,7 +408,7 @@
                             <constraint firstItem="2UA-Pg-MsN" firstAttribute="leading" secondItem="BzP-3O-mHz" secondAttribute="leading" id="wA3-mw-266"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PBH-FX-wWY"/>
+                    <navigationItem key="navigationItem" title="Favoriler" id="PBH-FX-wWY"/>
                     <connections>
                         <outlet property="tableView" destination="2UA-Pg-MsN" id="9de-RW-AFZ"/>
                     </connections>
@@ -409,7 +417,7 @@
             </objects>
             <point key="canvasLocation" x="2157.971014492754" y="1005.8035714285713"/>
         </scene>
-        <!--Basket Screen-->
+        <!--Sepetim-->
         <scene sceneID="Bk8-2Y-zLv">
             <objects>
                 <viewController id="E1G-i4-78p" customClass="BasketScreen" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -511,17 +519,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gönderim Ücreti:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Qg-bgm">
                                 <rect key="frame" x="25" y="649" width="137" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.55131164430000001" green="0.5504602341" blue="0.56533224989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ücretsiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk5-cJ-rBG">
                                 <rect key="frame" x="327" y="649" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.55131164430000001" green="0.5504602341" blue="0.56533224989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVx-uY-fNx">
                                 <rect key="frame" x="16" y="756.5" width="382" height="40.5"/>
+                                <color key="tintColor" name="confirmcolor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -564,7 +573,7 @@
                             <constraint firstItem="gk5-cJ-rBG" firstAttribute="top" secondItem="Ewu-oM-k0j" secondAttribute="bottom" constant="16" id="xca-Ta-6Oe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kby-dJ-D20"/>
+                    <navigationItem key="navigationItem" title="Sepetim" id="Kby-dJ-D20"/>
                     <connections>
                         <outlet property="basketTableView" destination="Gs3-L3-Frl" id="ahR-Ng-kd2"/>
                         <outlet property="labelGonderim" destination="Z77-Qg-bgm" id="kq8-08-DD9"/>
@@ -662,9 +671,19 @@
     </scenes>
     <resources>
         <image name="ayran" width="256" height="256"/>
+        <image name="favortiesoutlined" width="25" height="25"/>
         <image name="favouritefill" width="25" height="25"/>
         <image name="home" width="25" height="25"/>
         <image name="shoppingcart" width="25" height="25"/>
+        <namedColor name="basecolor">
+            <color red="0.097999997437000275" green="0.18400000035762787" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="confirmcolor">
+            <color red="0.29019607843137252" green="0.70980392156862748" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabbaricon">
+            <color red="0.30588235294117649" green="0.51372549019607838" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

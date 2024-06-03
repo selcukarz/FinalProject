@@ -13,6 +13,7 @@ class FoodRepository {
     var listFoods = BehaviorSubject<[Foods]>(value: [Foods]())
     var listBasketFoods = BehaviorSubject<[BasketFoods]>(value: [BasketFoods]())
     
+    
     func favorite(indexPath: IndexPath){
         
     }
@@ -83,5 +84,8 @@ class FoodRepository {
                 }
             }
         }
+    }
+    func updateFoods(_ food: [Foods]){
+            self.listFoods.onNext(food)
     }
 }

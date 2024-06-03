@@ -13,6 +13,7 @@
 		CF11D0CE2BFE034400928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CD2BFE034400928D00 /* Base */; };
 		CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0CF2BFE034500928D00 /* Assets.xcassets */; };
 		CF11D0D32BFE034500928D00 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF11D0D22BFE034500928D00 /* Base */; };
+		CF214E222C0DFAAF006EB2F6 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF214E212C0DFAAF006EB2F6 /* Oswald-ExtraLight.ttf */; };
 		CF3AE8F22C00AAC300B9406B /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */; };
 		CF8709822C05CC72008D397A /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709812C05CC72008D397A /* MainScreenViewModel.swift */; };
 		CF8709842C05CC7F008D397A /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709832C05CC7F008D397A /* DetailScreenViewModel.swift */; };
@@ -24,7 +25,6 @@
 		CF8709902C05D64E008D397A /* BasketFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87098F2C05D64E008D397A /* BasketFoods.swift */; };
 		CF8709932C060F5A008D397A /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */; };
 		CF8709952C061A02008D397A /* FavoriteFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8709942C061A02008D397A /* FavoriteFoods.swift */; };
-		CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */; };
 		CFA227B72C00AD9F00CC21C4 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B62C00AD9F00CC21C4 /* Foods.swift */; };
 		CFA227B92C03B6C900CC21C4 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */; };
 		CFA227C02C03C8A200CC21C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFA227BF2C03C8A200CC21C4 /* Alamofire */; };
@@ -44,6 +44,7 @@
 		CF11D0CF2BFE034500928D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF11D0D22BFE034500928D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF11D0D42BFE034500928D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF214E212C0DFAAF006EB2F6 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CF3AE8F12C00AAC300B9406B /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		CF8709812C05CC72008D397A /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		CF8709832C05CC7F008D397A /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		CF87098F2C05D64E008D397A /* BasketFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFoods.swift; sourceTree = "<group>"; };
 		CF8709922C060F5A008D397A /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		CF8709942C061A02008D397A /* FavoriteFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoods.swift; sourceTree = "<group>"; };
-		CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.ttf"; sourceTree = "<group>"; };
 		CFA227B62C00AD9F00CC21C4 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		CFA227B82C03B6C900CC21C4 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
 		CFA227C12C03E1D800CC21C4 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		CF8D9EDB2BFFD368002FA5F0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CF8D9EDE2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf */,
+				CF214E212C0DFAAF006EB2F6 /* Oswald-ExtraLight.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF214E222C0DFAAF006EB2F6 /* Oswald-ExtraLight.ttf in Resources */,
 				CF11D0D02BFE034500928D00 /* Assets.xcassets in Resources */,
-				CF8D9EDF2BFFD413002FA5F0 /* PoetsenOne-Regular.ttf in Resources */,
 				CF11D0D32BFE034500928D00 /* Base in Resources */,
 				CF11D0CE2BFE034400928D00 /* Base in Resources */,
 			);

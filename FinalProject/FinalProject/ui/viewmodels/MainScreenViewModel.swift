@@ -7,11 +7,12 @@
 
 import Foundation
 import RxSwift
+import UIKit
 
 class MainScreenViewModel{
     var frepo = FoodRepository()
     var listFoods = BehaviorSubject<[Foods]>(value: [Foods]())
-
+    
     init(){
         listFoods = frepo.listFoods
         
@@ -25,8 +26,9 @@ class MainScreenViewModel{
     func copyDatabase(){
         frepo.uploadFoods()
     }
-    func addFav(indexPath:IndexPath){
-        
+    func updateFood(){
+        _ = self.listFoods.subscribe(onNext: { list in
+            self.frepo.updateFoods(list)
+        })
     }
-    
 }

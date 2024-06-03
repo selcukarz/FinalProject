@@ -6,11 +6,17 @@
 //
 
 import Foundation
+import RxSwift
 
 
 class FavoritesScreenViewModel {
     var frepo = FoodRepository()
+    var listFoods = BehaviorSubject<[Foods]>(value: [Foods]())
     
+    init(){
+        listFoods = frepo.listFoods
+        
+    }
     
     
 }

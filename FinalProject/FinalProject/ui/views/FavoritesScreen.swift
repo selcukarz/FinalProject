@@ -10,11 +10,18 @@ import UIKit
 class FavoritesScreen: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var listFoods = [Foods]()
+    var viewModel = FavoritesScreenViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        _ = viewModel.listFoods.subscribe(onNext: { list in
+            self.listFoods = list.filter({$0.favori == true})
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
     }
     
     

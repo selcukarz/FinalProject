@@ -23,8 +23,8 @@ class Foods : Codable {
         self.favori = false
     }
     
-    func toArray() -> [Any] {
-            return [yemek_id ?? "", yemek_adi ?? "", yemek_resim_adi ?? "", yemek_fiyat ?? "", favori ?? false]
+    /*func toArray() -> [Any] {
+        return [yemek_id ?? "", yemek_adi ?? "", yemek_resim_adi ?? "", yemek_fiyat ?? "", favori ?? false]
     }
-    
+    */
 }
