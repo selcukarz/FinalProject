@@ -12,7 +12,6 @@ class MainScreenViewModel{
     var frepo = FoodRepository()
     var listFoods = BehaviorSubject<[Foods]>(value: [Foods]())
 
-
     init(){
         listFoods = frepo.listFoods
         
@@ -25,6 +24,9 @@ class MainScreenViewModel{
     }
     func copyDatabase(){
         frepo.uploadFoods()
+    }
+    func addFav(indexPath:IndexPath){
+        
     }
     
 }

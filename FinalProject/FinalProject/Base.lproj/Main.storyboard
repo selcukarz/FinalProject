@@ -534,7 +534,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonBucketConfirm:" destination="E1G-i4-78p" eventType="touchUpInside" id="1aW-dC-QiM"/>
+                                    <action selector="buttonBasketConfirm:" destination="E1G-i4-78p" eventType="touchUpInside" id="1aW-dC-QiM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺107" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a99-BI-qYe">

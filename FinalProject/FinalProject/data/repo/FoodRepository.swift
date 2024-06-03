@@ -13,10 +13,7 @@ class FoodRepository {
     var listFoods = BehaviorSubject<[Foods]>(value: [Foods]())
     var listBasketFoods = BehaviorSubject<[BasketFoods]>(value: [BasketFoods]())
     
-    func favorite(){
-        print("favoriye eklendi")
-    }
-    func calculateTotalPrice(){
+    func favorite(indexPath: IndexPath){
         
     }
     func search(searchText:String){
@@ -38,7 +35,7 @@ class FoodRepository {
             }
         }
     }
-    func addBasket(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:Int,yemek_siparis_adet:Int,kullanici_adi:String){ //add bucket function
+    func addBasket(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:Int,yemek_siparis_adet:Int,kullanici_adi:String){ //adding bucket function
         let url = URL(string: "http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php")!
         let params:Parameters = ["yemek_adi":yemek_adi,"yemek_resim_adi":yemek_resim_adi,"yemek_fiyat":yemek_fiyat,"yemek_siparis_adet":yemek_siparis_adet,"kullanici_adi":kullanici_adi]
         

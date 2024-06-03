@@ -14,7 +14,6 @@ class MainScreen: UIViewController {
     var listFoods = [Foods]()
     var viewModel = MainScreenViewModel()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -35,14 +34,12 @@ class MainScreen: UIViewController {
         
         let screenWidth = UIScreen.main.bounds.width
         let itemWidth = (screenWidth - 30) / 2
-        
         design.itemSize = CGSize(width: itemWidth, height: itemWidth*1.65)
         
         mainCollectionView.collectionViewLayout = design
     }
     override func viewWillAppear(_ animated: Bool) {
         viewModel.copyDatabase()
-        //Bu sayfaya dönüldüğünde verileri yüklenmiş olacak.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail"{
@@ -64,7 +61,7 @@ extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellPr
         
         cell.yemekImageView.image = UIImage(named: food.yemek_resim_adi!)
         cell.labelAd.text = food.yemek_adi!
-        cell.labelFiyat.text = "\(food.yemek_fiyat!)"
+        cell.labelFiyat.text = "₺"+"\(food.yemek_fiyat!)"
         cell.labelUcretsizGonderim.text = "Ücretsiz Gönderim"
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
@@ -81,23 +78,18 @@ extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellPr
         viewModel.add(yemek_adi: food.yemek_adi!, yemek_resim_adi: food.yemek_resim_adi!, yemek_fiyat: Int(food.yemek_fiyat!)!, yemek_siparis_adet: 1, kullanici_adi: "selcuk_arioz")
     }
     func clickedFav(indexPath: IndexPath){
-        let food = listFoods[indexPath.row]
-       // if food.favori == false {
-            //food.favori = true
-            //buttonfav.setImage(UIImage(named: "favoritefill"), for: .normal)
-        //}else {
-           // food.favori = false
-            //buttonfav.setImage(UIImage(named: "favortiesoutlined"), for: .normal)
-        //}
+        var food = listFoods[indexPath.row]
+        if food.favori == false {
+            food.favori = true
+        }else{
+            
+        }
         print("anasayfa \(food.yemek_adi!) favoriye eklendi.")
-        
-        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = listFoods[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: food)
     }
-    
 }
 extension MainScreen : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

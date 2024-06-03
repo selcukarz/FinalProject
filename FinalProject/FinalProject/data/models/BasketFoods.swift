@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BasketFoods : Codable {
+struct BasketFoods : Codable {
     var sepet_yemek_id:String?
     var yemek_adi:String?
     var yemek_resim_adi:String?
@@ -22,5 +22,23 @@ class BasketFoods : Codable {
         self.yemek_fiyat = yemek_fiyat
         self.yemek_siparis_adet = yemek_siparis_adet
         self.kullanici_adi = kullanici_adi
+    }
+    
+}
+
+class BasketFoodsArray {
+    var foods: [BasketFoods]
+    
+    init(foods: [BasketFoods]) {
+        self.foods = foods
+    }
+    func getInfoIntoArray() -> [String]{
+        var infos: [String] = []
+        for food in foods {
+            infos.append(food.yemek_siparis_adet!)
+            infos.append(food.yemek_fiyat!)
+
+        }
+        return infos
     }
 }

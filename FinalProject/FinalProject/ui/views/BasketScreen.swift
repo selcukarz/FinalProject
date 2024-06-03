@@ -17,11 +17,14 @@ class BasketScreen: UIViewController {
     var basketFoods = [BasketFoods]()
     var viewModel = BasketScreenViewModel()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         basketTableView.delegate = self
         basketTableView.dataSource = self
+        
         
         _ = viewModel.listBasketFoods.subscribe(onNext: { liste in
             self.basketFoods = liste
@@ -30,12 +33,17 @@ class BasketScreen: UIViewController {
             }
         })
     }
-    @IBAction func buttonBucketConfirm(_ sender: Any) {
-        print("Sepeti alım onaylandı.")
+    @IBAction func buttonBasketConfirm(_ sender: Any) {
+        let alert = UIAlertController(title: "Afiyet Olsun!", message: "Siparişiniz onaylandı.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Tamam", style: .default)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         viewModel.getAllFood(kullanici_adi:"selcuk_arioz")
+        viewModel.calculateTotalPrice()
     }
+    
 }
 extension BasketScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

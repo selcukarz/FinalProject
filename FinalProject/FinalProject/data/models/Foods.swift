@@ -13,14 +13,18 @@ class Foods : Codable {
     var yemek_adi:String?
     var yemek_resim_adi:String?
     var yemek_fiyat:String?
-    //var favori:Bool?
+    var favori:Bool?
     
-    init(yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String)/*,favori :Bool)*/ {
+    init(yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String,favori :Bool) {
         self.yemek_id = yemek_id
         self.yemek_adi = yemek_adi
         self.yemek_resim_adi = yemek_resim_adi
         self.yemek_fiyat = yemek_fiyat
-        //self.favori = false
+        self.favori = false
     }
-   
+    
+    func toArray() -> [Any] {
+            return [yemek_id ?? "", yemek_adi ?? "", yemek_resim_adi ?? "", yemek_fiyat ?? "", favori ?? false]
+    }
+    
 }
