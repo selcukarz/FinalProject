@@ -68,6 +68,7 @@ extension BasketScreen: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basketDetail") as! BasketTableViewCell
         let basketFood = basketFoods[indexPath.row]
         
+        
         let yemekFiyatInt = Int(basketFood.yemek_fiyat!)!
         let yemekAdetInt = Int(basketFood.yemek_siparis_adet!)!
         let totalPrice = yemekAdetInt * yemekFiyatInt
@@ -84,7 +85,7 @@ extension BasketScreen: UITableViewDelegate, UITableViewDataSource {
         let deleteAciton = UIContextualAction(style: .destructive, title: "Sil"){
             centexualAciton,view,bool in
             let basketFood = self.basketFoods[indexPath.row]
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(basketFood.yemek_adi!) silinsin mi?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(basketFood.yemek_adi!) sepetten silinsin mi?", preferredStyle: .alert)
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in

@@ -9,7 +9,6 @@ import UIKit
 import RxSwift
 
 class MainScreen: UIViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     var listFoods = [Foods]()
@@ -17,23 +16,20 @@ class MainScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
         
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         
         _ = viewModel.listFoods.subscribe(onNext: { list in
             self.listFoods = list
-            DispatchQueue.main.async {
-                self.mainCollectionView.reloadData()
-            }
+            self.mainCollectionView.reloadData()
+            
         })
         let design = UICollectionViewFlowLayout()
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         design.minimumInteritemSpacing = 10
         design.minimumLineSpacing = 10
         self.mainCollectionView.backgroundColor = UIColor(named: "viewbackground")
-        self.searchBar.backgroundColor = UIColor(named: "viewbackground")
         
         let screenWidth = UIScreen.main.bounds.width
         let itemWidth = (screenWidth - 30) / 2
@@ -108,13 +104,14 @@ extension MainScreen: UICollectionViewDelegate,UICollectionViewDataSource,CellPr
     }
     func clickedFav(indexPath: IndexPath){
         var food = listFoods[indexPath.row]
+        food.favori = true
         if food.favori == false {
             food.favori = true
         }else{
             food.favori = false
         }
         listFoods[indexPath.row] = food
-        viewModel.updateFood()
+        //viewModel.updateFood()
         print("anasayfa \(food.yemek_adi!) favoriye eklendi.")
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
